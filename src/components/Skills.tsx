@@ -1,7 +1,9 @@
 import { motion } from 'framer-motion';
 import { Icon } from '@iconify/react';
+import { useTranslation } from 'react-i18next';
 
 export default function Skills() {
+  const { t } = useTranslation();
   const skillCategories = [
     {
       title: "Frontend",
@@ -44,7 +46,7 @@ export default function Skills() {
           viewport={{ once: true }}
           className="text-3xl font-bold text-white mb-12 text-center"
         >
-          Skills & Technologies
+          {t('skills_section')}
         </motion.h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {skillCategories.map((category, index) => (

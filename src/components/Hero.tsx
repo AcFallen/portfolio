@@ -1,7 +1,11 @@
 import { Github, Linkedin, Mail } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
+
 
 export default function Hero() {
+
+  const { t } = useTranslation();
   return (
     <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-b from-gray-900 to-gray-800">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -19,7 +23,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-xl text-gray-300 mb-8"
         >
-          Junior Fronted Developer | Problem Solver | Tech Enthusiast
+          {t('junior_fronted_developer')}
         </motion.p>
         <motion.div 
           initial={{ opacity: 0, y: 20 }}

@@ -1,14 +1,17 @@
 import { Briefcase } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Icon } from '@iconify/react';
+import { useTranslation } from 'react-i18next';
 
 export default function Experience() {
+  const { t } = useTranslation();
+
   const experiences = [
     {
-      title: "Junior Frontend Developer",
-      company: "Vitamin supplement store",
-      period: "august 2024 - present",
-      description: "Managing the migration of ERP, CRM, and eCommerce frontends to modern technologies, improving performance, scalability, and user experience.",
+      title: t('junior_fronted_developer'),
+      company: t('store_suplements'),
+      period: `${t('august')} 2024 - ${t('present')}`,
+      description: t('description_1'),
       icon: [
         { component: <Icon icon="devicon:nextjs" className="w-6 h-6" />, name: "Next.js" },
         { component: <Icon icon="devicon:tailwindcss" className="w-6 h-6" />, name: "TailwindCSS" },
@@ -17,10 +20,10 @@ export default function Experience() {
       ]
     },
     {
-      title: "Junior Full Stack Developer",
-      company: "Vitamin supplement store",
-      period: "april 2024 - july 2024",
-      description: "Responsible for maintaining the company’s ERP system, ensuring its optimal performance and stability. Implemented new features and improvements based on suggestions from key departments, including Sales and Administration, to streamline operations and enhance productivity.",
+      title: t('junior_full_stack_developer'),
+      company: t('store_suplements'),
+      period: `${t('april')} 2024 - ${t('july')} 2024`,
+      description: t('description_2'),
       icon: [
         { component: <Icon icon="devicon:php" className="w-6 h-6" />, name: "PHP" },
         { component: <Icon icon="logos:mysql" className="w-6 h-6" />, name: "MySQL" },
@@ -29,10 +32,10 @@ export default function Experience() {
       ]
     },
     {
-      title: "Freelance Web Developer",
-      company: "Independent Contractor",
-      period: "constant",
-      description: "Collaborated on various web development projects using React and Node.js.",
+      title: t('freelance_web_developer'),
+      company: t('independent_contractor'),
+      period: t('constant'),
+      description: t('description_3'),
       icon: [
         { component: <Icon icon="devicon:nextjs" className="w-6 h-6" />, name: "Next.js" },
         { component: <Icon icon="devicon:nestjs" className="w-6 h-6" />, name: "NestJS" },
@@ -66,7 +69,7 @@ export default function Experience() {
           className="flex items-center gap-2 mb-12"
         >
           <Briefcase className="text-teal-400" size={24} />
-          <h2 className="text-3xl font-bold text-white">Experience</h2>
+          <h2 className="text-3xl font-bold text-white">{t('experience')}</h2>
         </motion.div>
         <motion.div 
           variants={container}

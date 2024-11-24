@@ -2,8 +2,10 @@
 import {  Mail, MapPin } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Icon } from '@iconify/react/dist/iconify.js';
+import { useTranslation } from 'react-i18next';
 
 export default function Contact() {
+  const { t } = useTranslation();
   return (
     <section id="contact" className="py-20 bg-gray-800">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -13,7 +15,7 @@ export default function Contact() {
           viewport={{ once: true }}
           className="text-3xl font-bold text-white mb-12 text-center"
         >
-          Get In Touch
+          {t('get_in_touch')}
         </motion.h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <motion.div 
@@ -28,7 +30,7 @@ export default function Contact() {
             >
               <Mail className="text-teal-400" size={24} />
               <div>
-                <h3 className="text-white font-semibold">Email</h3>
+                <h3 className="text-white font-semibold">{t('email')}</h3>
                 <p className="text-gray-400">r.apaza.cornejo@gmail.com</p>
               </div>
             </motion.div>
@@ -48,7 +50,7 @@ export default function Contact() {
             >
               <MapPin className="text-teal-400" size={24} />
               <div>
-                <h3 className="text-white font-semibold">Location</h3>
+                <h3 className="text-white font-semibold">{ t('location') }</h3>
                 <p className="text-gray-400">Arequipa, Peru</p>
               </div>
             </motion.div>
@@ -62,18 +64,18 @@ export default function Contact() {
             <motion.input
               whileFocus={{ scale: 1.01 }}
               type="text"
-              placeholder="Your Name"
+              placeholder={t('your_name')}
               className="w-full px-4 py-2 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-400"
             />
             <motion.input
               whileFocus={{ scale: 1.01 }}
               type="email"
-              placeholder="Your Email"
+              placeholder={t('your_email')}
               className="w-full px-4 py-2 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-400"
             />
             <motion.textarea
               whileFocus={{ scale: 1.01 }}
-              placeholder="Your Message"
+              placeholder={t('your_message')}
               rows={4}
               className="w-full px-4 py-2 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-400"
             ></motion.textarea>
@@ -82,7 +84,7 @@ export default function Contact() {
               whileTap={{ scale: 0.98 }}
               className="w-full px-6 py-3 bg-teal-400 text-gray-900 rounded-lg font-semibold hover:bg-teal-500 transition-colors"
             >
-              Send Message
+              {t('send_message')}
             </motion.button>
           </motion.form>
         </div>

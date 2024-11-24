@@ -1,7 +1,10 @@
 import { Code2 } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 export default function Projects() {
+  const { t } = useTranslation();
+
   const projects = [
     {
       title: "E-commerce Platform",
@@ -33,7 +36,7 @@ export default function Projects() {
           className="flex items-center gap-2 mb-12"
         >
           <Code2 className="text-teal-400" size={24} />
-          <h2 className="text-3xl font-bold text-white">Projects</h2>
+          <h2 className="text-3xl font-bold text-white">{t('proyects')}</h2>
         </motion.div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
