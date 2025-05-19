@@ -1,7 +1,6 @@
 import { Github, Linkedin, Mail } from "lucide-react";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import { TypeAnimation } from "react-type-animation";
 
 export default function Hero() {
   const { t } = useTranslation();
