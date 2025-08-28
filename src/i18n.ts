@@ -12,7 +12,7 @@ const resources = {
       skills: "Skills",
       contact: "Contact",
       software_developer: "Software Developer",
-      backend_development_assistant: "Backend Development Assistant",
+      data_analyst: "Data Analyst",
       junior_fronted_developer: "Junior Fronted Developer",
       junior_full_stack_developer: "Junior Full Stack Developer",
       freelance_web_developer: "Freelance Web Developer",
@@ -30,7 +30,7 @@ const resources = {
       description_3:
         "Collaborated on various web development projects using React and Node.js.",
       description_4:
-        "I am responsible for the company's backend, ensuring its optimal performance and stability, implementing new features and improvements based on suggestions from key departments, including Sales and Administration, to streamline operations and enhance productivity.",
+        "Responsible for business data analysis, creating interactive reports and dashboards for strategic decision-making. I implement Business Intelligence solutions and automate data analysis processes.",
       proyects: "Projects",
       skills_section: "Skills & Technologies",
       get_in_touch: "Get in touch",
@@ -50,7 +50,7 @@ const resources = {
       skills: "Habilidades",
       contact: "Contacto",
       software_developer: "Desarrollador de Software",
-      backend_development_assistant: "Auxiliar de Desarrollo Backend",
+      data_analyst: "Analista de Datos",
       junior_fronted_developer: "Desarrollador Frontend Junior",
       junior_full_stack_developer: "Desarrollador Full Stack Junior",
       freelance_web_developer: "Desarrollador Web Freelance",
@@ -68,7 +68,7 @@ const resources = {
       description_3:
         "Colaboró en varios proyectos de desarrollo web usando React y Node.js.",
       description_4:
-        "Me encargo de la parte de backend de la empresa, asegurando su óptimo rendimiento y estabilidad, implementando nuevas funciones y mejoras basadas en sugerencias de departamentos clave, incluidos Ventas y Administración, para optimizar las operaciones y mejorar la productividad.",
+        "Responsable del análisis de datos empresariales, creación de reportes y dashboards interactivos para la toma de decisiones estratégicas. Implemento soluciones de Business Intelligence y automatizo procesos de análisis de datos.",
       proyects: "Proyectos",
       skills_section: "Habilidades & Tecnologías",
       get_in_touch: "Contáctame",
