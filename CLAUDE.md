@@ -19,7 +19,7 @@ This is a React + TypeScript portfolio website built with Vite, featuring:
 ### Tech Stack
 - **Frontend**: React 18 with TypeScript
 - **Build Tool**: Vite
-- **Styling**: Tailwind CSS with custom brand colors (primary: #0ea5e9, secondary: #9333ea)
+- **Styling**: Tailwind CSS with custom brand colors (primary: #0ea5e9, secondary: #14b8a6)
 - **Internationalization**: i18next with browser language detection (English/Spanish)
 - **UI Components**: Lucide React icons, Framer Motion animations
 - **Code Quality**: ESLint with TypeScript and React hooks rules
@@ -37,7 +37,7 @@ This is a React + TypeScript portfolio website built with Vite, featuring:
 - **Type Safety**: Full TypeScript integration with strict configuration
 
 ### Internationalization
-The app uses i18next with browser language detection. Translations are stored in src/i18n.ts with support for English and Spanish. Language detection follows this order: navigator → querystring → cookie → localStorage → sessionStorage → path → subdomain.
+The app uses i18next with browser language detection. Translations are stored in [src/i18n.ts](src/i18n.ts) with support for English and Spanish. The detection order is: navigator → querystring → cookie → localStorage → sessionStorage → path → subdomain. App.tsx overrides this by checking `document.documentElement.lang` on mount and only accepts 'en' or 'es', defaulting to 'en'.
 
 ### Development Notes
 - Components use React hooks and functional component patterns

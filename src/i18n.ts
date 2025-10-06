@@ -32,6 +32,10 @@ const resources = {
       description_4:
         "Responsible for business data analysis, creating interactive reports and dashboards for strategic decision-making. I implement Business Intelligence solutions and automate data analysis processes.",
       proyects: "Projects",
+      // Projects
+      alimentor_title: "Alimentor - Diet Planning Platform",
+      alimentor_description: "A SaaS web application for nutrition professionals to create personalized meal plans, analyze recipes, and manage patient nutrition with international food databases.",
+      view_project: "View Project",
       skills_section: "Skills & Technologies",
       get_in_touch: "Get in touch",
       email: "Email",
@@ -70,6 +74,10 @@ const resources = {
       description_4:
         "Responsable del análisis de datos empresariales, creación de reportes y dashboards interactivos para la toma de decisiones estratégicas. Implemento soluciones de Business Intelligence y automatizo procesos de análisis de datos.",
       proyects: "Proyectos",
+      // Projects
+      alimentor_title: "Alimentor - Plataforma de Planificación de Dietas",
+      alimentor_description: "Aplicación web SaaS para profesionales de la nutrición que permite crear planes alimenticios personalizados, analizar recetas y gestionar la nutrición de pacientes con bases de datos internacionales de alimentos.",
+      view_project: "Ver Proyecto",
       skills_section: "Habilidades & Tecnologías",
       get_in_touch: "Contáctame",
       email: "Correo Electrónico",
