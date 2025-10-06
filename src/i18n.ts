@@ -12,13 +12,15 @@ const resources = {
       skills: "Skills",
       contact: "Contact",
       software_developer: "Software Developer",
-      data_analyst: "Data Analyst",
-      junior_fronted_developer: "Junior Fronted Developer",
+      backend_developer: "Backend Developer",
+      junior_fronted_developer: "Junior Frontend Developer",
       junior_full_stack_developer: "Junior Full Stack Developer",
       freelance_web_developer: "Freelance Web Developer",
       store_suplements: "Vitamin supplement store",
+      alferza_company: "Alferza",
       august: "August",
       april: "April",
+      july: "July",
       present: "present",
       constant: "constant",
       construction_company: "Construction Company",
@@ -26,11 +28,11 @@ const resources = {
       description_1:
         "I am in charge of managing the migration of ERP, CRM and e-commerce frontends to modern technologies, improving performance, scalability and user experience.",
       description_2:
-        "Responsible for maintaining the company’s ERP system, ensuring its optimal performance and stability. Implemented new features and improvements based on suggestions from key departments, including Sales and Administration, to streamline operations and enhance productivity.",
+        "Responsible for maintaining the company's ERP system, ensuring its optimal performance and stability. Implemented new features and improvements based on suggestions from key departments, including Sales and Administration, to streamline operations and enhance productivity.",
       description_3:
         "Collaborated on various web development projects using React and Node.js.",
       description_4:
-        "Responsible for business data analysis, creating interactive reports and dashboards for strategic decision-making. I implement Business Intelligence solutions and automate data analysis processes.",
+        "Develop scalable and robust endpoints based on Product Owner requirements. Manage continuous deployment, database backups, and backend development for both web and mobile applications.",
       proyects: "Projects",
       // Projects
       alimentor_title: "Alimentor - Diet Planning Platform",
@@ -54,25 +56,27 @@ const resources = {
       skills: "Habilidades",
       contact: "Contacto",
       software_developer: "Desarrollador de Software",
-      data_analyst: "Analista de Datos",
+      backend_developer: "Desarrollador Backend",
       junior_fronted_developer: "Desarrollador Frontend Junior",
       junior_full_stack_developer: "Desarrollador Full Stack Junior",
       freelance_web_developer: "Desarrollador Web Freelance",
-      store_suplements: "Tienda de suplementos vitaminicos",
+      store_suplements: "Tienda de suplementos vitamínicos",
+      alferza_company: "Alferza",
       august: "Agosto",
       april: "Abril",
+      july: "Julio",
       present: "presente",
       constant: "constante",
       construction_company: "Empresa de Construcción",
       independent_contractor: "Contratista Independiente",
       description_1:
-        "Me encargo gestionar la migración de frontends de ERP, CRM y comercio electrónico a tecnologías modernas, mejorando el rendimiento, la escalabilidad y la experiencia del usuario.",
+        "Me encargo de gestionar la migración de frontends de ERP, CRM y comercio electrónico a tecnologías modernas, mejorando el rendimiento, la escalabilidad y la experiencia del usuario.",
       description_2:
         "Responsable de mantener el sistema ERP de la empresa, asegurando su óptimo rendimiento y estabilidad. Implementé nuevas funciones y mejoras basadas en sugerencias de departamentos clave, incluidos Ventas y Administración, para optimizar las operaciones y mejorar la productividad.",
       description_3:
         "Colaboró en varios proyectos de desarrollo web usando React y Node.js.",
       description_4:
-        "Responsable del análisis de datos empresariales, creación de reportes y dashboards interactivos para la toma de decisiones estratégicas. Implemento soluciones de Business Intelligence y automatizo procesos de análisis de datos.",
+        "Desarrollo de endpoints escalables y robustos basados en requerimientos del Product Owner. Gestión de despliegue continuo, backups de base de datos y desarrollo backend para aplicaciones web y móviles.",
       proyects: "Proyectos",
       // Projects
       alimentor_title: "Alimentor - Plataforma de Planificación de Dietas",

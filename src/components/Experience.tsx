@@ -8,38 +8,34 @@ export default function Experience() {
 
   const experiences = [
     {
-      title: t("data_analyst"),
-      company: t("construction_company"),
+      title: t("backend_developer"),
+      company: t("alferza_company"),
       period: `${t("april")} 2025 - ${t("present")}`,
       description: t("description_4"),
       icon: [
         {
-          component: (
-            <Icon icon="logos:python" className="w-6 h-6" />
-          ),
-          name: "Python",
+          component: <Icon icon="devicon:nestjs" className="w-6 h-6" />,
+          name: "NestJS",
         },
         {
-          component: (
-            <Icon icon="devicon:pandas" className="w-6 h-6" />
-          ),
-          name: "Pandas",
+          component: <Icon icon="devicon:nodejs" className="w-6 h-6" />,
+          name: "Node.js",
         },
         {
-          component: (
-            <Icon icon="logos:tableau-icon" className="w-6 h-6" />
-          ),
-          name: "Tableau",
+          component: <Icon icon="devicon:postgresql" className="w-6 h-6" />,
+          name: "PostgreSQL",
         },
         {
-          component: <Icon icon="devicon:microsoftsqlserver" className="w-6 h-6" />,
-          name: "SQL Server",
+          component: <Icon icon="devicon:docker" className="w-6 h-6" />,
+          name: "Docker",
         },
         {
-          component: (
-            <Icon icon="logos:microsoft-power-bi" className="w-6 h-6" />
-          ),
-          name: "Power BI",
+          component: <Icon icon="devicon:gitlab" className="w-6 h-6" />,
+          name: "GitLab CI/CD",
+        },
+        {
+          component: <Icon icon="simple-icons:swagger" className="w-6 h-6" />,
+          name: "Swagger",
         },
       ],
     },
