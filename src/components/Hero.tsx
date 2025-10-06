@@ -153,8 +153,8 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.0 }}
-            href="/resume.pdf"
-            download
+            href="/cv_roberto.pdf"
+            download="CV_Roberto_Apaza_Cornejo.pdf"
             className="inline-block px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-secondary to-primary text-white font-medium rounded-full shadow-lg shadow-secondary/50 hover:shadow-primary/50 hover:-translate-y-1 transition-all text-sm sm:text-base relative overflow-hidden group"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.98 }}
