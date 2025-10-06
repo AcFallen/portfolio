@@ -1,106 +1,41 @@
 import { Github, Linkedin, Mail } from "lucide-react";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import LiquidEther from "./LiquidEther";
 
 export default function Hero() {
   const { t } = useTranslation();
   
-  // Elementos espaciales animados
-  const stars = Array.from({ length: 50 }, (_, i) => ({
-    id: i,
-    x: Math.random() * 100,
-    y: Math.random() * 100,
-    size: Math.random() * 3 + 1,
-    animationDuration: Math.random() * 3 + 2,
-  }));
-
-  const planets = [
-    { x: 85, y: 20, size: 60, color: "bg-secondary/20" },
-    { x: 15, y: 70, size: 40, color: "bg-primary/20" },
-    { x: 70, y: 80, size: 30, color: "bg-teal-300/20" },
-  ];
   return (
     <section
       id="home"
       className="min-h-screen w-full flex items-center justify-center relative overflow-hidden bg-gray-900"
     >
-      {/* Fondo espacial animado */}
-      <div className="absolute inset-0">
-        {/* Gradiente de fondo */}
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-slate-800 to-gray-900" />
-        
-        {/* Estrellas */}
-        {stars.map((star) => (
-          <motion.div
-            key={star.id}
-            className="absolute bg-white rounded-full opacity-70"
-            style={{
-              left: `${star.x}%`,
-              top: `${star.y}%`,
-              width: `${star.size}px`,
-              height: `${star.size}px`,
-            }}
-            animate={{
-              opacity: [0.3, 1, 0.3],
-              scale: [1, 1.2, 1],
-            }}
-            transition={{
-              duration: star.animationDuration,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-          />
-        ))}
-        
-        {/* Planetas */}
-        {planets.map((planet, index) => (
-          <motion.div
-            key={index}
-            className={`absolute rounded-full ${planet.color} backdrop-blur-sm`}
-            style={{
-              left: `${planet.x}%`,
-              top: `${planet.y}%`,
-              width: `${planet.size}px`,
-              height: `${planet.size}px`,
-            }}
-            animate={{
-              rotate: 360,
-              scale: [1, 1.1, 1],
-            }}
-            transition={{
-              rotate: {
-                duration: 20 + index * 10,
-                repeat: Infinity,
-                ease: "linear",
-              },
-              scale: {
-                duration: 4 + index * 2,
-                repeat: Infinity,
-                ease: "easeInOut",
-              },
-            }}
-          />
-        ))}
-        
-        {/* Partículas flotantes */}
-        <motion.div
-          className="absolute inset-0"
-          animate={{
-            backgroundPosition: ["0% 0%", "100% 100%"],
-          }}
-          transition={{
-            duration: 30,
-            repeat: Infinity,
-            ease: "linear",
-          }}
-          style={{
-            backgroundImage: "radial-gradient(circle at 20% 50%, rgba(20, 184, 166, 0.1) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(14, 165, 233, 0.1) 0%, transparent 50%)",
-            backgroundSize: "400% 400%",
-          }}
+      {/* LiquidEther como fondo */}
+      <div className="absolute inset-0 w-full h-full">
+        <LiquidEther
+          colors={['#0ea5e9', '#14b8a6', '#ec4899']}
+          mouseForce={15}
+          cursorSize={120}
+          isViscous={false}
+          viscous={30}
+          iterationsViscous={32}
+          iterationsPoisson={32}
+          resolution={0.5}
+          isBounce={false}
+          autoDemo={true}
+          autoSpeed={0.3}
+          autoIntensity={1.8}
+          takeoverDuration={0.25}
+          autoResumeDelay={3000}
+          autoRampDuration={0.6}
         />
       </div>
 
-      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16 md:py-20 flex flex-col md:flex-row items-center justify-center md:justify-between gap-6 md:gap-8 lg:gap-12 z-10">
+      {/* Overlay oscuro para mejor legibilidad del texto */}
+      <div className="absolute inset-0 bg-gray-900/40 backdrop-blur-[1px]" />
+
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16 md:py-20 flex flex-col md:flex-row items-center justify-center md:justify-between gap-6 md:gap-8 lg:gap-12 z-10 relative">
         {/* Profile photo */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
@@ -127,7 +62,7 @@ export default function Hero() {
           />
         </motion.div>
 
-        <div className="text-center md:text-left w-full max-w-xl">
+        <div className="text-center md:text-left w-full max-w-2xl">
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -137,22 +72,32 @@ export default function Hero() {
             Roberto Carlos Apaza Cornejo
           </motion.h1>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-lg sm:text-xl md:text-2xl text-secondary mb-3 sm:mb-4 h-8 sm:h-10"
+            className="text-lg sm:text-xl md:text-2xl text-secondary mb-3 sm:mb-4"
           >
-            <p className="font-semibold">Backend Developer</p>
+            <p className="font-semibold">Full Stack Developer</p>
           </motion.div>
-          
+
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="text-sm sm:text-base md:text-lg text-gray-300 mb-4 sm:mb-6 max-w-md mx-auto md:mx-0"
+            className="text-sm sm:text-base md:text-lg text-gray-100 mb-2 max-w-2xl mx-auto md:mx-0 leading-relaxed"
           >
-            Especializado en arquitecturas backend escalables y APIs robustas
+            Ingeniero de Software con <span className="text-secondary font-semibold">+2.5 años</span> de experiencia creando sistemas empresariales y SaaS escalables.
+          </motion.p>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.7 }}
+            className="text-sm sm:text-base text-gray-300 mb-6 max-w-2xl mx-auto md:mx-0 leading-relaxed"
+          >
+            Especializado en <span className="text-primary font-medium">Node.js</span>, con <span className="text-primary font-medium">Next.js</span> en el frontend y <span className="text-primary font-medium">NestJS</span> en el backend.
+            Mi enfoque: construir soluciones que escalan con tu negocio.
           </motion.p>
 
           {/* <motion.p
@@ -227,15 +172,15 @@ export default function Hero() {
 
       {/* Scroll indicator - Animación simplificada */}
       <motion.div
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center"
+        className="absolute bottom-8 left-0 right-0 flex flex-col items-center z-20"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.2, duration: 0.6 }}
       >
-        <span className="text-secondary text-sm mb-2 font-medium">
+        <span className="text-secondary text-sm mb-2 font-medium text-center">
           {t("scroll_down", "Explora mi trabajo")}
         </span>
-        <motion.div 
+        <motion.div
           className="w-6 h-10 border-2 border-secondary rounded-full flex justify-center p-1 backdrop-blur-sm bg-gray-900/20"
           whileHover={{ scale: 1.1 }}
         >

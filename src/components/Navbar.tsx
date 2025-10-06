@@ -62,7 +62,7 @@ export default function Navbar() {
               </motion.a>
             ))}
             {/* Language Selector */}
-            <LanguageSelector currentLanguage={i18n.language} changeLanguage={changeLanguage} />
+            <LanguageSelector currentLanguage={i18n.language} changeLanguage={changeLanguage} isMobile={false} />
           </div>
 
           {/* Mobile Menu Button */}
@@ -83,7 +83,7 @@ export default function Navbar() {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-              className="md:hidden"
+              className="md:hidden bg-gray-900/95 backdrop-blur-md"
             >
               <div className="px-2 pt-2 pb-3 space-y-1">
                 {menuItems.map((item) => (
@@ -98,7 +98,9 @@ export default function Navbar() {
                   </motion.a>
                 ))}
                 {/* Mobile Language Selector */}
-                <LanguageSelector currentLanguage={i18n.language} changeLanguage={changeLanguage} />
+                <div className="px-3 py-2">
+                  <LanguageSelector currentLanguage={i18n.language} changeLanguage={changeLanguage} isMobile={true} />
+                </div>
               </div>
             </motion.div>
           )}
@@ -112,31 +114,48 @@ export default function Navbar() {
 const LanguageSelector = ({
   currentLanguage,
   changeLanguage,
+  isMobile = false,
 }: {
   currentLanguage: string;
   changeLanguage: (lng: string) => void;
+  isMobile?: boolean;
 }) => {
   const languages = [
-    { code: 'en', name: 'English', flag: 'openmoji:flag-united-states' },
-    { code: 'es', name: 'Español', flag: 'openmoji:flag-spain' },
+    { code: 'en', name: 'EN', fullName: 'English', flag: 'openmoji:flag-united-states' },
+    { code: 'es', name: 'ES', fullName: 'Español', flag: 'openmoji:flag-spain' },
   ];
 
+  const getCurrentLanguage = () => languages.find(lang => lang.code === currentLanguage) || languages[0];
+  const getNextLanguage = () => {
+    const currentIndex = languages.findIndex(lang => lang.code === currentLanguage);
+    return languages[(currentIndex + 1) % languages.length];
+  };
+
+  const handleToggle = () => {
+    const nextLang = getNextLanguage();
+    changeLanguage(nextLang.code);
+  };
+
+  const current = getCurrentLanguage();
+
   return (
-    <div className="flex items-center space-x-4">
-      {languages.map(({ code, name, flag }) => (
-        <motion.button
-          key={code}
-          onClick={() => changeLanguage(code)}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.95 }}
-          className={`flex items-center px-3 py-2 text-sm font-medium rounded-lg ${
-            currentLanguage === code ? 'bg-teal-400 text-white' : 'text-gray-300 hover:text-teal-400'
-          }`}
-        >
-          <Icon icon={flag} className="w-5 h-5 mr-2" />
-          {name}
-        </motion.button>
-      ))}
-    </div>
+    <motion.button
+      onClick={handleToggle}
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
+      className={`flex items-center gap-2 px-3 py-2 text-sm font-medium rounded-lg bg-teal-400/10 border border-teal-400/30 text-teal-400 hover:bg-teal-400 hover:text-gray-900 transition-all ${
+        isMobile ? 'w-full justify-center' : ''
+      }`}
+    >
+      <Icon icon={current.flag} className="w-5 h-5" />
+      <span>{current.name}</span>
+      <motion.span
+        animate={{ rotate: 180 }}
+        transition={{ duration: 0.3 }}
+        className="text-xs"
+      >
+        ⇄
+      </motion.span>
+    </motion.button>
   );
 };

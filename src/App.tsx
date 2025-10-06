@@ -7,18 +7,17 @@ import Contact from './components/Contact';
 import { useEffect } from 'react';
 import i18n from './i18n';
 
-
 function App() {
 
   useEffect(() => {
     const htmlLang = document.documentElement.lang || 'en';
     const validLangs = ['en', 'es']; // Idiomas válidos
     const langToSet = validLangs.includes(htmlLang) ? htmlLang : 'en';
-  
+
     i18n.changeLanguage(langToSet);
   }, []);
 
-  
+
   return (
     <div className="bg-gray-900 text-white">
       <Navbar />
